@@ -10,14 +10,14 @@ aus, die gedruckt werden kann.
 
   - Das Programm an die Startleiste anheften:  Mit der rechten
     Maustaste auf das Programmsymbol klicken und "An Taskleiste anheften".
-    [[file:pic/taskleiste.png]]
+    [[file:images/taskleiste.png]]
   - Das Holding mit den Buchbinderinformationen (Feld =985=) öffen.
   - In das Feld hineinklicken und den Feldinhalt kopieren (mit =Strg-A= und =Strg-C=)
   - In der Taskleiste auf des Symbol des Skripts klicken.
   - Hier auf OK klicken (wir haben das Feld ja schon in der Zwischenablage)
-    [[file:pic/clipboard.png]]
+    [[file:images/clipboard.png]]
   - Die Signatur eingeben
-    [[file:pic/sig.png]]
+    [[file:images/sig.png]]
   - Die Datei öffnet sich automatisch und kann gedruckt werden.
   - Die Dateien werden mit =[Signatur]_JJJJ-TT.txt= benannt und im Ordner
     abgelegt, der in =conf.py= eingetragen ist.
