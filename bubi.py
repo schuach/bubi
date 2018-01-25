@@ -85,25 +85,30 @@ def write_output(dct):
                 outfile.write(prefix + sf + "\n")
 
     with open(outfile_name, "w", encoding="utf-8") as outfile:
-        write_sf("a")
+        outfile.write(HEADER)
         outfile.write("\n\n")
-        write_sf("b")
-        write_sf("c")
+        write_sf("b") # beauftragte Firma
+        outfile.write("\n\n")
         write_sf("d", "TITEL: ")
-        write_sf("e")
-        write_sf("f")
-        write_sf("g")
-        write_sf("h")
-        write_sf("i")
-        write_sf("j")
-        write_sf("k")
-        write_sf("l")
-        write_sf("m")
-        write_sf("n")
-        write_sf("o")
-        write_sf("p")
-        write_sf("q")
-        write_sf("r")
+        write_sf("e") # Untertitel
+        outfile.write(f"SIGNATUR: {call_nr}\n")
+        outfile.write("\n")
+        write_sf("f") # Art der Vorlage (Attrappe, Musterband)
+        outfile.write("\n")
+        write_sf("g", "BINDEART:") # Bindeart
+        write_sf("h") # Rückenfarbe
+        write_sf("i") # Deckenfarbe
+        outfile.write("\n")
+        write_sf("j") # Umschläge
+        write_sf("k") # Index
+        write_sf("l") # Beilagen
+        write_sf("m") # Notizen
+        outfile.write("\n")
+        write_sf("n") # Bandzahl, Jahreszahl, Stückzahl (in je einem SF)
+        outfile.write("\n")
+        write_sf("o") # Lieferfrist
+        outfile.write("\n\n")
+        outfile.write(FOOTER)
 
     os.startfile(outfile_name)
 

@@ -7,3 +7,7 @@ Universitätsplatz 3a
 8010 Graz
 """
 
+FOOTER = """Lieferdatum:
+Mehrarbeit:
+Preis:
+"""
