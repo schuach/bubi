@@ -1,0 +1,66 @@
+* BuBi
+Dieses Skript bietet einen Workaround für das Drucken von Buchbinderaufträgen
+mit Alma. Es nimmt den Feldinhalt aus der Zwischenablage und gibt eine Textdatei
+aus, die gedruckt werden kann.
+
+* Verwendung
+  Hier wird die Verwendung vorgeführt, wenn man bereits eine exe-Datei erstellt
+  hat. Wenn man das Skript direkt verwenden möchte, kann es mit =python bubi.py=
+  gestartet werden. Die Variante mit der exe-Datei ist aber einfacher :-)
+
+  - Das Programm an die Startleiste anheften:  Mit der rechten
+    Maustaste auf das Programmsymbol klicken und "An Taskleiste anheften".
+    [[file:pic/taskleiste.png]]
+  - Das Holding mit den Buchbinderinformationen (Feld =985=) öffen.
+  - In das Feld hineinklicken und den Feldinhalt kopieren (mit =Strg-A= und =Strg-C=)
+  - In der Taskleiste auf des Symbol des Skripts klicken.
+  - Hier auf OK klicken (wir haben das Feld ja schon in der Zwischenablage)
+    [[file:pic/clipboard.png]]
+  - Die Signatur eingeben
+    [[file:pic/sig.png]]
+  - Die Datei öffnet sich automatisch und kann gedruckt werden.
+  - Die Dateien werden mit =[Signatur]_JJJJ-TT.txt= benannt und im Ordner
+    abgelegt, der in =conf.py= eingetragen ist.
+
+* Voraussetzungen und Installation
+  Den Quelltext kann man hier herunterladen. Einfach "Clone or download" ->
+  "Download ZIP". Diese ZIP-Datei an einem Ort der Wahl entpacken und man kann
+  loslegen.
+*** Direkt mit dem Python Interpreter (wenn man dran schrauben will)
+    =Python 3.6= oder neuer (erhältlich unter [[https://www.python.org/]]) und die
+    Module =pyperclip= und =easygui=.
+
+    Die Abhängigkeiten werden in Windows PowerShell mit den folgenden Befehlen
+    installiert:
+    #+BEGIN_EXAMPLE
+    pip install pyperclip
+    pip install easygui
+    #+END_EXAMPLE
+
+    Danach kann das skript =bubi.py= einfach mit dem Befehl =python bubi.py=
+    gestartet werden:
+    #+BEGIN_EXAMPLE
+    cd wo/auch/immer/die/datei/liegt
+    python bubi.py
+    #+END_EXAMPLE
+
+*** Ausführbare exe-Datei (für die Tägliche Arbeit)
+    Der Einfachheit halber empfiehlt es sich, eine Ausführbare Datei zu
+    erstellen, um das Programm durch einen Mausklick starten zu können. Zum
+    Erstellen dieser Datei gelten dieselben Voraussetzungen wie Wenn man
+    =pyinstaller= installiert hat kann man mit dem Befehl =pyinstaller -F -w
+    bubi.py= auch eine ausführbare Datei herstellen.
+
+    #+BEGIN_EXAMPLE
+    pip install pyinstaller
+    cd bubi
+    pyinstaller -F -w bubi.py
+    #+END_EXAMPLE
+
+    Die Konfiguration in =conf.py= muss man machen, bevor man die exe
+    erstellt.
+
+* Konfiguration
+  In der Datei =conf.py= kann man einen Header, einen Footer und das Verzeichnis
+  einstellen, in dem die Ausgabedateien abgelegt werden sollen.
+  

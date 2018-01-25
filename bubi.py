@@ -55,7 +55,7 @@ def get_instr():
         reply = easygui.buttonbox(msg, choices=["OK", "Abbrechen"])
 
         if reply == "Abbrechen":
-            quit()
+            raise SystemExit
         else:
             instr = pyperclip.paste()
 
@@ -71,7 +71,14 @@ Bitte kopieren Sie den Feldinhalt in die Zwischenablage."""
 
 def write_output(dct):
     """Writes the contents of the dictionary to a file"""
-    call_nr = easygui.enterbox(msg="Bitte die Signatur eingeben")
+    call_nr = ''
+
+    while call_nr == '':
+        call_nr = easygui.enterbox(msg="Bitte die Signatur eingeben")
+
+        if call_nr == None:
+            raise SystemExit
+
     outfile_name = OUT_DIR + call_nr.replace(" ", "-") +  "_{:%Y-%m-%d}.txt".format(datetime.datetime.now())
 
     def write_sf(sf_code, prefix=""):
@@ -116,3 +123,5 @@ def run():
     instr = get_instr()
     dct = makedict(instr)
     write_output(dct)
+
+run()

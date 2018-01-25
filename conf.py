@@ -1,5 +1,5 @@
 # Verzeichnis, in dem die Output-Dateien abgelegt werden sollen
-OUT_DIR = "C:/Users/schuhs/temp/bubi_test/"
+OUT_DIR = "Z:/Buchbinderaufträge/"
 
 # Verschiedene Textbausteine
 HEADER = """Universitätsbibliothek Graz
