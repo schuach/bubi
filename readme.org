@@ -22,6 +22,9 @@ aus, die gedruckt werden kann.
   - Die Dateien werden mit =[Signatur]_JJJJ-TT.txt= benannt und im Ordner
     abgelegt, der in =conf.py= eingetragen ist.
 
+    *Bewegte Bilder:*
+    [[file:images/bubi.gif]]
+
 * Voraussetzungen und Installation
   Den Quelltext kann man hier herunterladen. Einfach "Clone or download" ->
   "Download ZIP". Diese ZIP-Datei an einem Ort der Wahl entpacken und man kann
