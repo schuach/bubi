@@ -73,3 +73,4 @@ aus, die gedruckt werden kann.
   #+BEGIN_SRC python
   OUT_DIR = "C:/Pfad/zum/Ausgabeverzeichnis/"
   #+END_SRC
+  
